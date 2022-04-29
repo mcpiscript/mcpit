@@ -116,22 +116,89 @@ POSITIONS = {
     "red_wool": (16, 128, 32, 144),
     "pink_wool": (32, 128, 48, 144),
     "birch_leaves": (48, 128, 64, 144),
-    "dark_oak_leaves": (32, 128, 48, 144),
+    "birch_leaves_fast": (32, 128, 48, 144),
     "bed1": (48, 128, 64, 144),
     "bed2": (64, 128, 80, 144),
     "melon_side": (80, 128, 96, 144),
     "melon_top": (96, 128, 112, 144),
-    "lapis_block": (112, 128, 128, 144),
+    # Row 10
+    "lapis_block": (0, 144, 16, 160),
+    "green_wool" : (16, 144, 32, 160), 
+    "lime_wool" : (32, 144,48 , 160),
+    "glass_pane_top" : (64, 144, 80, 160),
+    "bed3" : (80, 144, 96, 160),
+    "bed4" : (96, 144, 112, 160),
+    "bed5" : (112, 144, 128, 160),
+    # Row 11
+    "lapis_ore" : (0, 160, 16, 176),
+    "brown_wool" : (16, 160, 32, 176),
+    "yellow_wool" : (32, 160, 48, 176),
+    "stonecutter_side" : (128, 160, 144, 176),
+    "stonecutter_top" : (144, 160, 160, 176),
+    # Row 12
+    "sandstone_top" : (0, 176, 16, 192),
+    "blue_wool" : (16, 176, 32, 192),
+    "light_blue_wool" : (32, 176, 48, 192),
+    # Row 13
+    "sandstone" : (0, 192, 16, 208),
+    "purple_wool" : (16, 192, 32, 208),
+    "magenta_wool" : (32, 192, 48, 208),
+    "quartz_block_top" : (64, 192, 80, 208),
+    "quartz_pillar_top" : (80, 192, 96, 208),
+    "chiseled_quartz_block_top" : (96, 192, 112, 208),
+    "grass_block_top_tinted" : (192, 192, 208, 208),
+    "water_1" : (208, 192, 224, 208),
+    "water_2" : (224, 192, 240, 208),
+    "water_3" : (240, 192, 256, 208),
+    # Row 14
+    "sandstone_bottom" : (0, 208, 16, 224),
+    "cyan_wool" : (16, 208, 32, 224),
+    "orange_wool" : (32, 208, 48, 224),
+    "quartz_block_bottom" : (48, 208, 64, 224),
+    "quartz_block_side" : (64, 208, 80, 224),
+    "quartz_pillar" : (80, 208, 96, 224),
+    "chiseled_quartz_block" : (96, 208, 112, 224),
+    "glowing_obsidian" : (160, 208, 176, 224), 
+    "spruce_leaves":(176, 208, 192, 224), 
+    "spruce_leaves_fast":(192, 208, 208, 224), 
+    "more_button":(208, 208, 224, 224), 
+    "water_4":(224, 208, 240, 224), 
+    "water_5":(240, 208, 256, 224), 
+    # Row 15
+    "nether_bricks":(0, 224, 16, 240), 
+    "light_gray_wool":(16, 224, 32, 240), 
+    "chiseled_sandstone":(64, 224, 80, 240), 
+    "cut_sandstone":(80, 224, 96, 240), 
+    "nether_reactor_2":(128, 224, 144, 240), 
+    "nether_reactor_1":(144, 224, 160, 240),
+    "nether_reactor_0":(160, 224, 176, 240),
+    "dark_oak_leaves":(176, 224, 192, 240),
+    "dark_oak_leaves_fast":(192, 224, 208, 240),
+    "lava_1":(208, 224, 224, 240),
+    "lava_2":(224, 224, 240, 240),
+    "lava_3":(240, 224, 256, 240),
+    # Row 16
+    "break_0":(0, 240, 16, 256), 
+    "break_1":(16, 240, 32, 256),
+    "break_2":(32, 240, 48, 256),
+    "break_3":(48, 240, 64, 256),
+    "break_4":(64, 240, 80, 256),
+    "break_5":(80, 240, 96, 256),
+    "break_6":(96, 240, 112, 256),
+    "break_7":(112, 240, 128, 256),
+    "break_8":(128, 240, 144, 256),
+    "break_9":(144, 240, 160, 256),
+    "update":(192, 240, 208, 256), 
+    "ateupd":(208, 240, 224, 256), 
+    "lava_4":(224, 240, 240, 256), 
+    "lava_5":(240, 240, 256, 256), 
 }
 
-
-def extract_fire():
-    pass
 
 
 if __name__ == "__main__":
     with Image.open(
         "/usr/lib/minecraft-pi-reborn-client/data/images/terrain.png"
     ) as img:
-        region = img.crop(POSITIONS["black_wool"])
+        region = img.crop(POSITIONS["nether_reactor_2"])
         region.show()
